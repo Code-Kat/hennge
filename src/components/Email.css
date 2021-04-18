@@ -1,0 +1,142 @@
+.email {
+  margin: 0 50px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid lightgray;
+}
+
+.mobileEmail {
+  display: none;
+}
+
+.email__from {
+  padding-left: 5px;
+  width: 20%;
+}
+
+.ellepsis {
+  padding-right: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.email__to {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.folderIcon {
+  height: 20px;
+  padding-right: 15px;
+}
+
+.email__replies {
+  position: relative;
+}
+
+.email__replies > p {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.email__subject {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.email__subject > p {
+  padding-right: 45px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clipIcon {
+  height: 15px;
+  padding-right: 15px;
+}
+
+.email__date {
+  width: 10%;
+  color: rgb(46, 46, 46);
+  font-weight: 600;
+}
+
+@media (max-width: 950px) {
+  .email__date {
+    width: 15%;
+  }
+
+  .email__subject {
+    width: 35%;
+  }
+}
+
+@media (max-width: 700px) {
+  .email {
+    display: none;
+  }
+
+  .mobileEmail {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10%;
+
+    align-items: flex-start;
+    border-bottom: 1.5px solid lightgray;
+  }
+
+  .mobileEmail__top {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .mobileEmail__topRight {
+    padding-left: 10px;
+    flex: 1;
+  }
+
+  .from-date {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .mobileFrom {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .email__to {
+    width: 100%;
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+
+  .arrowIcon {
+    height: 8px;
+    padding-left: 5px;
+  }
+
+  .clipIcon {
+    padding-left: 10px;
+    padding-right: 7px;
+  }
+
+  .mailIcon {
+    height: 30px;
+    padding-top: 3px;
+  }
+
+  .mobileSubject {
+    width: 100%;
+  }
+}

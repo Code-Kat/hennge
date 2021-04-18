@@ -1,0 +1,148 @@
+.topBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+
+.dateSearch {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid lightgray;
+  border-radius: 7px;
+  margin-left: 50px;
+}
+.calendarImg {
+  height: 20px;
+  padding-left: 10px;
+}
+
+.react-daterange-picker__wrapper {
+  border: none;
+  display: flex;
+  font-size: 15px;
+}
+
+.react-daterange-picker__clear-button {
+  display: none;
+}
+
+.react-daterange-picker__calendar-button {
+  order: 1;
+  outline: none;
+}
+
+.react-daterange-picker__inputGroup {
+  order: 2;
+}
+
+.react-daterange-picker__range-divider {
+  order: 2;
+}
+
+.searchIcon {
+  height: 20px;
+  background-color: whitesmoke;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 8px 15px;
+  border-left: 1.5px solid lightgray;
+  cursor: pointer;
+}
+
+.results {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: rgb(117, 117, 117);
+  margin-left: 50px;
+}
+
+.emailTopBarContainer {
+  display: flex;
+  width: 100%;
+}
+
+.emailTopBarNone {
+  width: 100%;
+  height: 1.5px;
+  background-color: lightgray;
+  margin: 0 50px;
+}
+
+.emailTopBar {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0 50px;
+  background-color: whitesmoke;
+  border-bottom: 1.5px solid lightgray;
+  border-top: 1.5px solid lightgray;
+}
+
+.emailTopBar__from {
+  flex: 0.2;
+  text-align: left;
+  padding-left: 5px;
+  color: rgb(117, 117, 117);
+}
+
+.emailTopBar__to {
+  flex: 0.3;
+  text-align: left;
+  color: rgb(117, 117, 117);
+}
+
+.emailTopBar__subject {
+  flex: 0.4;
+  text-align: left;
+  color: rgb(117, 117, 117);
+}
+
+.emailTopBar__date {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(46, 46, 46);
+}
+
+.triangleIcon {
+  height: 7px;
+  padding-left: 5px;
+}
+
+@media (max-width: 700px) {
+  .dateSearch {
+    margin-left: 20px;
+  }
+
+  .emailTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0px;
+  }
+  .emailTopBar > h4 {
+    display: none;
+  }
+  .emailTopBar__date {
+    display: none;
+  }
+
+  .mobileTopBar {
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 315px) {
+  .dateSearch {
+    margin-left: 5px;
+  }
+}
