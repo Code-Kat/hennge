@@ -6,6 +6,10 @@
   padding-top: 30px;
 }
 
+.mobileTopBar {
+  display: none;
+}
+
 .dateSearch {
   display: flex;
   align-items: center;

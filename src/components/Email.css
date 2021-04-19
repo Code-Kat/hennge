@@ -1,9 +1,17 @@
 .email {
+  border-bottom: 1.5px solid lightgray;
   margin: 0 50px;
+}
+
+.emailTop {
   padding: 8px 0;
   display: flex;
   align-items: center;
-  border-bottom: 1.5px solid lightgray;
+}
+
+.emailTop:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
 .mobileEmail {
@@ -69,6 +77,10 @@
   font-weight: 600;
 }
 
+.message {
+  padding: 20px 5px;
+}
+
 @media (max-width: 950px) {
   .email__date {
     width: 15%;
@@ -93,6 +105,10 @@
     border-bottom: 1.5px solid lightgray;
   }
 
+  .mobilEmail:hover {
+    background-color: whitesmoke;
+  }
+
   .mobileEmail__top {
     width: 100%;
     display: flex;
@@ -107,12 +123,16 @@
   .from-date {
     display: flex;
     align-items: center;
-    max-width: 100%;
   }
 
   .mobileFrom {
     font-weight: 600;
     font-size: 15px;
+    flex: 1;
+  }
+
+  .mobileDate {
+    font-size: 12px;
   }
 
   .email__to {
@@ -138,5 +158,9 @@
 
   .mobileSubject {
     width: 100%;
+  }
+
+  .message {
+    padding: 20px 0;
   }
 }

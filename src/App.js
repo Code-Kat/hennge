@@ -6,22 +6,22 @@ import emails from "./emails";
 import noEmailsImg from "./assets/logo.png";
 
 function App() {
-  const [selectedEmails, setSelectedEmails] = useState(emails);
+  const [selectedEmails, setSelectedEmails] = useState([]);
   const [value, onChange] = useState([new Date(), new Date()]);
 
+  var dateFrom = value[0].toLocaleDateString();
+  var dateTo = value[1].toLocaleDateString();
+
+  var d1 = dateFrom.split("/");
+  var d2 = dateTo.split("/");
+
+  var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);
+  var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);
+
   const checkDates = () => {
-    var dateFrom = value[0].toLocaleDateString();
-    var dateTo = value[1].toLocaleDateString();
-
-    var d1 = dateFrom.split("/");
-    var d2 = dateTo.split("/");
-
-    var from = new Date(d1[2], parseInt(d1[1]) - 1, d1[0]);
-    var to = new Date(d2[2], parseInt(d2[1]) - 1, d2[0]);
-
     let i;
     for (i = 0; i < emails.length; i++) {
-      var c = emails[i].data.date.toLocaleDateString().split("/");
+      var c = emails[i].date.toLocaleDateString().split("/");
       var check = new Date(c[2], parseInt(c[1]) - 1, c[0]);
       if (check > from && check < to) {
         setSelectedEmails([...selectedEmails, emails[i]]);
@@ -46,16 +46,14 @@ function App() {
           selectedEmails.map(
             ({
               id,
-              data: {
-                to,
-                from,
-                date,
-                message,
-                replies,
-                attachment,
-                subject,
-                time,
-              },
+              to,
+              from,
+              date,
+              message,
+              replies,
+              attachment,
+              subject,
+              time,
             }) => (
               <Email
                 key={id}
